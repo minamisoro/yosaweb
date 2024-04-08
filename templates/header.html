@@ -1,0 +1,48 @@
+<div id="header"
+     class="w-full"
+     hx-on:resize="media_size()">
+    <div class="relative w-full h-[720px]">
+        <a href="#character">
+            <svg class="absolute h-[700px] top-0 left-0 brightness-75 hover:brightness-100" viewbox="0 0 808 700">
+                <mask id="frame1">
+                    <path d="M 0,0
+                            L 808,0
+                            L 708,700
+                            L 0,700 Z"
+                        fill="white"></path>
+                </mask>
+                <image height="250%" x="0" href="assets/image/honka.jpg" mask="url(#frame1)"></image>
+                <path d="M 784,0
+                        L 808,0
+                        L 708,700
+                        L 684,700 Z"
+                      fill="#d946ef"></path>
+            </svg>
+        </a>
+        <a href="#character">
+            <svg class="absolute h-[700px] top-5 right-0 brightness-75 hover:brightness-100" viewbox="0 0 808 700">
+                <mask id="frame2">
+                    <path d="M 0,700
+                            L 808,700
+                            L 808,0
+                            L 100,0 Z"
+                          fill="white"></path>
+                </mask>
+                <image height="100%" x="-300" href="assets/image/utsushimi.png" mask="url(#frame2)"></image>
+                <path d="M 100,0
+                        L 0,700
+                        L 22,700
+                        L 122,0 Z"
+                      fill="#3b82f6"></path>
+            </svg>
+        </a>
+    </div>
+    <div class="flex flex-col items-center w-full text-neutral-800 text-5xl gap-5 p-6 underline-offset-8">
+        <p class="row-start-1 col-start-5 col-span-12"><span class="decoration-blue-500">さぁ、<span class="bg-neutral-800 text-neutral-100 pl-2 pr-2">我らの夜</span>を始めよう</span></p>
+        <p class="row-start-2 col-start-6 col-span-11"><span class="underline decoration-fuchsia-500">鏡</span>に映るは<span class="underline decoration-blue-500">君の笑顔</span></p>
+        <p class="row-start-3 col-start-7 col-span-10"><span class="underline decoration-blue-500">唯一無二</span>の<span class="underline decoration-fuchsia-500">真澄鏡</span></p>
+        <p class="row-start-4 col-start-8 col-span-9"><span class="underline decoration-fuchsia-500">華鏡よさり</span>なり</p>
+        <p class="row-start-5 col-start-9 col-span-8">お見知りおきを</p>
+    </div>
+    <canvas class="absolute top-0 -z-10" width="1536" height="1088"></canvas>
+</div>
