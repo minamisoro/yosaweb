@@ -21,7 +21,7 @@ async fn main() {
             Method::DELETE,
         ]));
 
-    let listener = TcpListener::bind("127.0.0.1:3000")
+    let listener = TcpListener::bind("0.0.0.0:3000")
         .await
         .expect("Failed to bind localhost");
 
