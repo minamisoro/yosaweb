@@ -69,7 +69,7 @@ jobs:
       with:
         host: ${{ vars.DROPLET_IP }}
         username: root
-        password: ${{ secrets.DROPLET_PASSWORD }}
+        key: ${{ secrets.DROPLET_PASSWORD }}
         script: |
           cd ~
           docker-compose down
