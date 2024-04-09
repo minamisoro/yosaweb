@@ -21,5 +21,5 @@ RUN cargo build --release --target x86_64-unknown-linux-musl
 # Create a new stage with a minimal image
 FROM scratch
 COPY --from=builder /official/target/x86_64-unknown-linux-musl/release/official /official
-ENTRYPOINT ["/official"]
+ENTRYPOINT ["/official/official"]
 EXPOSE 3000
