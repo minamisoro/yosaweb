@@ -58,12 +58,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install sshpass
-      run: sudo apt-get install sshpass
-
-    - name: Copy docker-compose.yml to droplet
-      run: sshpass -v -p ${{ secrets.DROPLET_PASSWORD }} scp -o StrictHostKeyChecking=no docker-compose.yml root@${{ vars.DROPLET_IP }}:~
-
     - name: Deploy
       uses: appleboy/ssh-action@master
       with:
@@ -71,7 +65,8 @@ jobs:
         username: root
         key: ${{ secrets.DROPLET_PASSWORD }}
         script: |
-          cd ~
+          cd yosaweb
+          git pull
           docker-compose down
           docker-compose pull
           docker-compose up -d
