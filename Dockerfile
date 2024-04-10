@@ -28,7 +28,7 @@ RUN npm run web:prod
 
 # Create a new stage with a minimal image
 FROM scratch
-COPY /assets /assets
+COPY ./assets /assets
 COPY --from=builder /app/target/x86_64-unknown-linux-musl/release/official /official
 COPY --from=tailwind /css/assets /assets
 ENTRYPOINT ["/official"]
